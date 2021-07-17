@@ -16,6 +16,7 @@ export class PasteService {
     @InjectModel(Paste.name) private PasteModel: Model<PasteDocument>,
     @Inject(CACHE_MANAGER) private cacheManager: Cache,
   ) {}
+
   async create(createPasteDto: CreatePasteDto) {
     const id = this.generateUUID();
     const createdPaste = new this.PasteModel({

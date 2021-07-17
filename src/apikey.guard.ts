@@ -11,8 +11,8 @@ export class ApikeyGuard implements CanActivate {
     if (!api_key) {
       return false;
     }
-
-    if (req.headers.api_key === api_key) {
+    const bearerHeader = req.headers.Authorization.split(' ')[1];
+    if (bearerHeader === api_key) {
       return true;
     }
 
