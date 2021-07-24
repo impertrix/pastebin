@@ -13,6 +13,6 @@ import { AuditMiddleware } from './audit.middleware';
   controllers: [],
   providers: [],
 })
-export class AppModule implements NestModule {
+export class AppModule {
 
 }
